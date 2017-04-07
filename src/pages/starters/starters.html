@@ -1,0 +1,33 @@
+<!--
+  Generated template for the Starters page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-shadow>
+
+  <ion-navbar color="pRed">
+    <ion-title>Entrantes</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addStarter()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="wallpaper" padding>
+  <ion-card *ngFor="let starter of starters | async" (click)="showOptions(starter.$key, starter.nombre,
+  starter.descripcion, starter.ingredientes, starter.alergenos, starter.precio, starter.foto)">
+    <img src={{starter.foto}}/>
+    <ion-card-content>
+      <ion-card-title class="titleCard">{{starter.nombre}}</ion-card-title>
+      <h3>Descripción <small class="txt"><br>{{starter.descripcion}}</small></h3>
+      <h3>Ingredientes <small class="txt"><br>{{starter.ingredientes}}</small></h3>
+      <h3>Alérgenos <small class="txt"><br>{{starter.alergenos}}</small></h3>
+      <p class="precio">{{starter.precio}}€ la unidad</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

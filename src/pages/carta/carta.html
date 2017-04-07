@@ -1,0 +1,58 @@
+<!--
+  Generated template for the Carta page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="pRed">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nuestra carta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="wallpaper" padding>
+
+  <ion-card>
+    <img src="http://res.cloudinary.com/jdanielcd/image/upload/v1491405583/dishes/starters.jpg"/>
+    <ion-card-content>
+      <ion-card-title class="titleCard">Entrantes</ion-card-title>
+      <p class="descriptionCard">Disfruta de nuestra gran variedad de Entrantes.</p>
+      <button ion-button (click)="goStarters()" color="pRed" full clear small>
+        <ion-icon name="book" class="iconButton"></ion-icon> Ver entrantes</button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="http://res.cloudinary.com/jdanielcd/image/upload/v1491405581/dishes/fishes.jpg"/>
+    <ion-card-content>
+      <ion-card-title class="titleCard">Pescados</ion-card-title>
+      <p class="descriptionCard">Disfruta de nuestro pescado fresco.</p>
+      <button ion-button (click)="goFishes()" color="pRed" full clear small>
+        <ion-icon name="book" class="iconButton"></ion-icon> Ver pescados</button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="http://res.cloudinary.com/jdanielcd/image/upload/v1491405580/dishes/meats.jpg"/>
+    <ion-card-content>
+      <ion-card-title class="titleCard">Carnes</ion-card-title>
+      <p class="descriptionCard">Disfruta de nuestra carnes selectas.</p>
+      <button ion-button (click)="goMeats()" color="pRed" full clear small>
+        <ion-icon name="book" class="iconButton"></ion-icon> Ver carnes</button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="http://res.cloudinary.com/jdanielcd/image/upload/v1491405583/dishes/desserts.jpg"/>
+    <ion-card-content>
+      <ion-card-title class="titleCard">Postres</ion-card-title>
+      <p class="descriptionCard">Disfruta de nuestra dulces y postres caseros.</p>
+      <button ion-button (click)="goDesserts()" color="pRed" full clear small>
+        <ion-icon name="book" class="iconButton"></ion-icon> Ver postres</button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

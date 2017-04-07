@@ -1,0 +1,32 @@
+<!--
+  Generated template for the HPedido page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="pRed">
+    <ion-title>Historial de pedidos</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="wallpaper">
+  <ion-card *ngFor="let pedido of pedidos | async">
+    <ion-card-content>
+      <ion-card-title class="titleCard">Pedido</ion-card-title>
+      <h3 class="txt-center">Restaurante <small class="txt"><br>{{pedido.restaurante}}</small></h3>
+      <h3 class="txt-center">Entrates <small class="txt"><br>{{pedido.entrantes}}</small></h3>
+      <h3 class="txt-center">Carnes <small class="txt"><br>{{pedido.carnes}}</small></h3>
+      <h3 class="txt-center">Pescados <small class="txt"><br>{{pedido.pescados}}</small></h3>
+      <h3 class="txt-center">Postres <small class="txt"><br>{{pedido.postres}}</small></h3>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

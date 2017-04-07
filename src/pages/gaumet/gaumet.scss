@@ -1,0 +1,18 @@
+page-gaumet {
+  .imgLocal{
+    border-radius: 5px;
+  }
+}
+
+.wallpaper {
+  background: url('http://res.cloudinary.com/jdanielcd/image/upload/co_rgb:632727,e_gradient_fade:20,o_50/v1491421621/dishes/wallpaper-min.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.toastStyle {
+  > div{
+       background-color:rgb(250, 122, 59)!important;
+   }
+}

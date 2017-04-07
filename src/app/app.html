@@ -1,0 +1,25 @@
+<ion-menu [content]="content">
+  <ion-header >
+    <ion-toolbar color="pRed">
+      <img class="logo" src="http://res.cloudinary.com/jdanielcd/image/upload/v1491319608/logo_j3py6l.png" alt="">
+      <ion-title class="p5">COC <small><br>Canary Old Clothes</small></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list no-lines>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon name="home" class="iconMenu" color="pRed"*ngIf="p.title == 'Home'"></ion-icon>
+        <ion-icon name="restaurant" class="iconMenu" color="pRed"*ngIf="p.title == 'Restaurantes'"></ion-icon>
+        <ion-icon name="book" class="iconMenu" color="pRed"*ngIf="p.title == 'Carta'"></ion-icon>
+        <ion-icon name="basket" class="iconMenu" color="pRed"*ngIf="p.title == 'Pedido'"></ion-icon>
+        <ion-icon name="calendar" class="iconMenu" color="pRed"*ngIf="p.title == 'Reserva'"></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

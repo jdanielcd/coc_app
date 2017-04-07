@@ -1,0 +1,31 @@
+<!--
+  Generated template for the Desserts page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="pRed">
+    <ion-title>Postres</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addDessert()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="wallpaper" padding>
+  <ion-card *ngFor="let dessert of desserts | async" (click)="showOptions(dessert.$key, dessert.nombre,
+  dessert.descripcion, dessert.ingredientes, dessert.alergenos, dessert.precio, dessert.foto)">
+    <img src={{dessert.foto}}/>
+    <ion-card-content>
+      <ion-card-title class="titleCard">{{dessert.nombre}}</ion-card-title>
+      <h3>Descripción <small><br>{{dessert.descripcion}}</small></h3>
+      <h3>Ingredientes <small><br>{{dessert.ingredientes}}</small></h3>
+      <h3>Alérgenos <small><br>{{dessert.alergenos}}</small></h3>
+      <p class="precio">{{dessert.precio}} €</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
